@@ -892,7 +892,38 @@
                     "direction": "down",
                     "moveSpeed": "1",
                     "animSpeed": "3",
-                    "script": [],
+                    "script": [
+                        {
+                            "id": "bf64466c-e287-4fca-8419-ee3d95ba6b6a",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Papa: MC... I\nhaven't been\nhonest with you...",
+                                    "Papa:\nThere's..-*cough*\nI need to tell you",
+                                    "Papa: You remember\nyour mama, right?",
+                                    "MC: Mhm.. what\nabout her..?",
+                                    "Papa: She\nprotected you,\nprotected us.",
+                                    "Papa: After she\npassed away, I had\nto protect us. ",
+                                    "Papa: By that I\nmean..we protected\nthe Light.",
+                                    "MC: The Light?\nLike.. the\nfireplace?",
+                                    "Papa: Haha..in a\nway, yes actually.",
+                                    "Papa: We brought\nLight to the main\ncastle.",
+                                    "Papa: In doing\nthat, we covered\nall things..",
+                                    "Papa: With Light.\nWe kept everyone\nsafe.",
+                                    "Papa: Mama was the\nonly one strong\nenough..",
+                                    "Papa: She was\nstronger than I\never was.",
+                                    "Papa: She\nprotected the\nLight.",
+                                    "Papa: I need you..\nI need you to\nprotect it now.",
+                                    "MC: Protect what??\nThe Light? It's a\nfire, Papa!"
+                                ],
+                                "avatarId": ""
+                            }
+                        },
+                        {
+                            "id": "423ccfb0-9e41-435c-8d7a-c9a555fea3d8",
+                            "command": "EVENT_END"
+                        }
+                    ],
                     "startScript": [
                         {
                             "id": "9843971a-5fa9-41bd-a27e-8b85f31ca83a",
@@ -904,7 +935,7 @@
                             "id": "efd4f573-5764-4620-bdfc-22d1590d8713",
                             "command": "EVENT_IF_FALSE",
                             "args": {
-                                "variable": "9",
+                                "variable": "28",
                                 "__collapseElse": false
                             },
                             "children": {
@@ -930,10 +961,91 @@
                             }
                         },
                         {
+                            "id": "16305813-c2b0-435e-ae74-9f357249c7f0",
+                            "command": "EVENT_IF_FALSE",
+                            "args": {
+                                "variable": "28",
+                                "__collapseElse": false,
+                                "__disableElse": true,
+                                "__comment": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "30887118-9f36-434d-87d9-f7fc24d6227f",
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Papa: What's\n*cough* what's\nwrong?!",
+                                                "Papa: you're... MC\nyou're bleeding!",
+                                                "Papa: what\nhappened?!",
+                                                "MC: Papa t-there\nwas a monster! A\nshadow!",
+                                                "MC: It hit me...\nIt hurt papa...",
+                                                "Papa: I know..\nalright...",
+                                                "Papa: MC...\nAlright, let's go\nby the fire."
+                                            ],
+                                            "avatarId": ""
+                                        }
+                                    },
+                                    {
+                                        "id": "7a515b59-353d-4b7a-a8d0-4b4f7c6954db",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "84323e52-5cff-4a44-b119-deb8f3c3b1eb",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "id": "f74552ae-1e1a-42f8-8199-2a94cffd7603",
+                            "command": "EVENT_IF_FALSE",
+                            "args": {
+                                "variable": "29",
+                                "__collapseElse": false,
+                                "__comment": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "id": "d1173a90-422d-4ed4-92e4-4fba8fc0ae05",
+                                        "command": "EVENT_ACTOR_MOVE_TO",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "number",
+                                                "value": 11
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 5
+                                            },
+                                            "moveType": "vertical",
+                                            "useCollisions": false,
+                                            "__comment": true
+                                        }
+                                    },
+                                    {
+                                        "id": "8c699411-7170-4ece-805f-e2c966bd8873",
+                                        "command": "EVENT_END"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "id": "e3ed9315-1b83-417e-ab2b-8096f7e63b81",
+                                        "command": "EVENT_END"
+                                    }
+                                ]
+                            }
+                        },
+                        {
                             "id": "29f1a79a-4d18-4c66-8d6e-4099c37c1b93",
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "9",
+                                "variable": "28",
                                 "__collapseElse": false,
                                 "__collapse": false,
                                 "__comment": false,
@@ -948,26 +1060,126 @@
                                             "actorId": "$self$",
                                             "x": {
                                                 "type": "number",
+                                                "value": 4
+                                            },
+                                            "y": {
+                                                "type": "number",
+                                                "value": 7
+                                            },
+                                            "moveType": "horizontal",
+                                            "useCollisions": false,
+                                            "__comment": true
+                                        }
+                                    },
+                                    {
+                                        "id": "24ae004a-47c5-4a44-9594-6ad61495ad62",
+                                        "command": "EVENT_ACTOR_MOVE_TO",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "x": {
+                                                "type": "number",
                                                 "value": 9
                                             },
                                             "y": {
                                                 "type": "number",
                                                 "value": 14
                                             },
-                                            "moveType": "horizontal",
+                                            "moveType": "vertical",
                                             "useCollisions": false
                                         }
                                     },
                                     {
-                                        "id": "6f7dc45f-93ca-49ff-8140-1cc17bfec69b",
-                                        "command": "EVENT_TEXT",
+                                        "id": "50bb2e24-7988-4642-9489-0cf5975fee7a",
+                                        "command": "EVENT_IF_FALSE",
                                         "args": {
-                                            "text": [
-                                                "Papa: What's\n*cough* what's\nwrong?!",
-                                                "Papa: you're... MC\nyou're bleeding!",
-                                                "Papa: what\nhappened?!"
+                                            "variable": "29",
+                                            "__collapseElse": false,
+                                            "__comment": false,
+                                            "__disableElse": false,
+                                            "__collapse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "id": "423e6a69-04b4-4af0-83f9-bcb73a20a523",
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Papa: What's\n*cough* what's\nwrong?!",
+                                                            "Papa: you're... MC\nyou're bleeding!",
+                                                            "Papa: what\nhappened?!",
+                                                            "MC: Papa t-there\nwas a monster! A\nshadow!",
+                                                            "MC: It hit me...\nIt hurt papa...",
+                                                            "Papa: I know..\nalright...",
+                                                            "Papa: MC...\nAlright, let's go\nby the fire."
+                                                        ],
+                                                        "avatarId": ""
+                                                    }
+                                                },
+                                                {
+                                                    "id": "eb75ca73-70b9-414e-91ab-f88a8c10f126",
+                                                    "command": "EVENT_SET_TRUE",
+                                                    "args": {
+                                                        "variable": "29"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "d1a3eaa2-c2ac-41ff-b6cf-5a95a2dac6ce",
+                                                    "command": "EVENT_IF_FALSE",
+                                                    "args": {
+                                                        "variable": "31",
+                                                        "__collapseElse": false
+                                                    },
+                                                    "children": {
+                                                        "true": [
+                                                            {
+                                                                "id": "a4af3b8b-693c-4cd9-9a30-802098551a44",
+                                                                "command": "EVENT_ACTOR_MOVE_TO",
+                                                                "args": {
+                                                                    "actorId": "$self$",
+                                                                    "x": {
+                                                                        "type": "number",
+                                                                        "value": 11
+                                                                    },
+                                                                    "y": {
+                                                                        "type": "number",
+                                                                        "value": 5
+                                                                    },
+                                                                    "moveType": "horizontal",
+                                                                    "useCollisions": false
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "a0fdfe49-e1b5-4765-9872-a3b16309b8a0",
+                                                                "command": "EVENT_SET_TRUE",
+                                                                "args": {
+                                                                    "variable": "31"
+                                                                }
+                                                            },
+                                                            {
+                                                                "id": "5b3aae84-e6bf-4b3b-b47e-39e9885b6289",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ],
+                                                        "false": [
+                                                            {
+                                                                "id": "12c162f7-314b-4d63-b983-7c104ac96cf9",
+                                                                "command": "EVENT_END"
+                                                            }
+                                                        ]
+                                                    }
+                                                },
+                                                {
+                                                    "id": "f41890e9-5b22-45bc-83d8-f08a8951d3e9",
+                                                    "command": "EVENT_END"
+                                                }
                                             ],
-                                            "avatarId": ""
+                                            "false": [
+                                                {
+                                                    "id": "52ed7715-045f-4ccf-b7e8-6ff357454d71",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
                                         }
                                     },
                                     {
@@ -12734,7 +12946,7 @@
             "imageHeight": 144,
             "filename": "Bathroom.png",
             "inode": "562949953421356",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "03ca41ed-31f4-483d-ad8b-8e6c5e4dd45c",
@@ -12745,7 +12957,7 @@
             "imageHeight": 144,
             "filename": "Black Screen.png",
             "inode": "562949953421878",
-            "_v": 1634186427933
+            "_v": 1634586258770
         },
         {
             "id": "072bad5b-0cba-4186-b829-507f44f0a29d",
@@ -12756,7 +12968,7 @@
             "imageHeight": 160,
             "filename": "Chore 1.png",
             "inode": "2533274790396226",
-            "_v": 1634182540664
+            "_v": 1634586258771
         },
         {
             "id": "62a64ab1-8da8-481c-aa2d-d232355028f2",
@@ -12767,7 +12979,7 @@
             "imageHeight": 160,
             "filename": "Chore 2.png",
             "inode": "1688849860264496",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "ff81bc4b-3dab-40d8-bd09-1383ee0c1e49",
@@ -12778,7 +12990,7 @@
             "imageHeight": 160,
             "filename": "Chore 3.png",
             "inode": "1125899906843186",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "9803e73b-771b-4ee6-8a87-d20081ff54b2",
@@ -12789,7 +13001,7 @@
             "imageHeight": 256,
             "filename": "Forest final right.png",
             "inode": "562949953421691",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "1a65affa-bda4-4c67-87a5-c444b2d2d6c5",
@@ -12800,7 +13012,7 @@
             "imageHeight": 256,
             "filename": "Forest final.png",
             "inode": "1125899906843005",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "d03a2caa-6be7-4120-862f-09655a49ba24",
@@ -12811,7 +13023,7 @@
             "imageHeight": 200,
             "filename": "Hallway 2.png",
             "inode": "1125899906843006",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "f161a5e2-43ce-44a8-9ffe-82371355ed10",
@@ -12822,7 +13034,7 @@
             "imageHeight": 200,
             "filename": "Hallway.png",
             "inode": "844424930132351",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "057decfa-f4f9-4596-86ef-6167e0372f23",
@@ -12833,7 +13045,7 @@
             "imageHeight": 200,
             "filename": "Hallways.png",
             "inode": "844424930132352",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "173b604a-8310-4253-a4bf-4f02ac4bad9d",
@@ -12844,7 +13056,7 @@
             "imageHeight": 160,
             "filename": "Kitchen.png",
             "inode": "844424930132354",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "970c37cc-020b-4372-b2b2-538d883a259a",
@@ -12855,7 +13067,7 @@
             "imageHeight": 144,
             "filename": "MC Awake.png",
             "inode": "844424930132356",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "beec3762-890c-4c99-835c-a8db4fb153c2",
@@ -12866,7 +13078,7 @@
             "imageHeight": 160,
             "filename": "MC Room.png",
             "inode": "1970324836974981",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "16b8d676-f315-4019-8523-4058316453db",
@@ -12877,7 +13089,7 @@
             "imageHeight": 144,
             "filename": "MC Scared.png",
             "inode": "562949953421876",
-            "_v": 1634186349045
+            "_v": 1634586258771
         },
         {
             "id": "8c016a6b-1fc4-4545-aab4-bdfbacbff388",
@@ -12888,7 +13100,7 @@
             "imageHeight": 144,
             "filename": "MC Sleeping.png",
             "inode": "844424930132358",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "a8b2a56f-4619-4130-ba36-4641ca39fd4c",
@@ -12899,7 +13111,7 @@
             "imageHeight": 160,
             "filename": "Papa and Mama Room try 2.png",
             "inode": "1407374883553673",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "e9bea496-c790-4733-8320-02981271e639",
@@ -12910,7 +13122,7 @@
             "imageHeight": 160,
             "filename": "Papa and Mama Room.png",
             "inode": "844424930132362",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "5c7d5398-3aa7-4acc-beb3-6078b4070ec9",
@@ -12921,7 +13133,7 @@
             "imageHeight": 144,
             "filename": "Smile boi.png",
             "inode": "1125899906843019",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "cb5f0076-f34a-4f45-a91a-e984f2d14f8d",
@@ -12932,7 +13144,7 @@
             "imageHeight": 144,
             "filename": "Title Screen.png",
             "inode": "844424930132365",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "a56185e2-41e8-4d9a-97de-fd01ea08a151",
@@ -12943,7 +13155,7 @@
             "imageHeight": 160,
             "filename": "Twins Room.png",
             "inode": "1125899906843023",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "6fad1892-bcb2-4924-bd1c-1e4d03dfeabb",
@@ -12954,7 +13166,7 @@
             "imageHeight": 144,
             "filename": "cave.png",
             "inode": "844424930132346",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "b340b9a2-2865-4e05-91c0-148846a693c8",
@@ -12965,7 +13177,7 @@
             "imageHeight": 160,
             "filename": "house.png",
             "inode": "1125899906843009",
-            "_v": 1634183655233
+            "_v": 1634586258771
         },
         {
             "id": "f8b1c7ad-7bb2-44b2-8189-175ae8698f11",
@@ -12976,7 +13188,7 @@
             "imageHeight": 144,
             "filename": "logo.png",
             "inode": "1125899906843011",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "b49ea566-b022-478c-979d-ec3ee255fdc5",
@@ -12987,7 +13199,7 @@
             "imageHeight": 144,
             "filename": "menu.png",
             "inode": "562949953421703",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "1b7fa267-d716-40f0-b0d0-f4f966610e07",
@@ -12998,7 +13210,7 @@
             "imageHeight": 256,
             "filename": "outside.png",
             "inode": "844424930132360",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "40fda058-df90-4205-a239-fe77bce4fa79",
@@ -13009,7 +13221,7 @@
             "imageHeight": 256,
             "filename": "stars.png",
             "inode": "844424930132364",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "f047ff0e-58ad-49fc-bd2b-ec84fc1f7ab3",
@@ -13020,7 +13232,7 @@
             "imageHeight": 144,
             "filename": "titlescreen.png",
             "inode": "1125899906843022",
-            "_v": 1634182540685
+            "_v": 1634586258771
         },
         {
             "id": "f3102db4-2273-411d-b33f-4d6f65959c60",
@@ -13031,7 +13243,7 @@
             "imageHeight": 256,
             "filename": "underground.png",
             "inode": "844424930132368",
-            "_v": 1634182540686
+            "_v": 1634586258771
         }
     ],
     "spriteSheets": [
@@ -13042,7 +13254,7 @@
             "type": "static",
             "filename": "Bed 1.png",
             "inode": "844424930132372",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "d3cc0382-2f20-45e2-93c4-04b50f5ae6e0",
@@ -13051,7 +13263,7 @@
             "type": "static",
             "filename": "Bed 2.png",
             "inode": "1970324836974997",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "e0aefa97-44dd-4ec4-aed1-32e7679b94d2",
@@ -13060,7 +13272,7 @@
             "type": "static",
             "filename": "Chest side.png",
             "inode": "844424930132376",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "9e34e1e9-a4d5-44f4-a00a-129fbb325266",
@@ -13069,7 +13281,7 @@
             "type": "static",
             "filename": "Chore Game Icon.png",
             "inode": "562949953421818",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "2a09c045-cdee-49bb-99a3-258ffd1d61b2",
@@ -13078,7 +13290,7 @@
             "type": "static",
             "filename": "Chore character.png",
             "inode": "562949953421819",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "b518f268-e68e-4413-93ab-d31a5355394f",
@@ -13087,7 +13299,7 @@
             "type": "static",
             "filename": "Dresser 1.png",
             "inode": "844424930132378",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "8c53e715-f5a0-4d47-a8ba-103602d5a25d",
@@ -13096,7 +13308,7 @@
             "type": "static",
             "filename": "Dresser 2.png",
             "inode": "844424930132379",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "b162e949-ce22-49d7-945f-f015e2aaeb14",
@@ -13105,7 +13317,7 @@
             "type": "static",
             "filename": "Dresser top 1.png",
             "inode": "1125899906843036",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "18b17c84-5949-4eca-a43e-41ee452521d1",
@@ -13114,7 +13326,7 @@
             "type": "static",
             "filename": "Dresser top 2.png",
             "inode": "844424930132381",
-            "_v": 1634182540686
+            "_v": 1634586258792
         },
         {
             "id": "b6e38d37-5819-46d5-b5bb-d330e6183427",
@@ -13123,7 +13335,7 @@
             "type": "static",
             "filename": "Hidde Sprite 2.png",
             "inode": "562949953421823",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "7d22b907-5731-48a2-b77a-f63dec4b9f5b",
@@ -13132,7 +13344,7 @@
             "type": "static",
             "filename": "Hidden Sprite.png",
             "inode": "1407374883553784",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "b57f5da8-fcf9-428d-9d14-6ce811baa7dd",
@@ -13141,7 +13353,7 @@
             "type": "actor_animated",
             "filename": "MC Sprite 2.png",
             "inode": "562949953421729",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "28df4a8e-084f-4ffd-a932-0a584409127a",
@@ -13150,7 +13362,7 @@
             "type": "actor_animated",
             "filename": "MC Sprite.png",
             "inode": "562949953421730",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "d88f19c3-9703-454e-a698-1ad1f42aac23",
@@ -13159,7 +13371,7 @@
             "type": "static",
             "filename": "Nightstand_Dresser.png",
             "inode": "1125899906843043",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "aaee5234-0d72-449d-9ac4-6c07dcc84ec4",
@@ -13168,7 +13380,7 @@
             "type": "static",
             "filename": "Papa bed 1 (with papa).png",
             "inode": "281474976711079",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "754c3a27-67be-44ff-980d-a59c34aad657",
@@ -13177,7 +13389,7 @@
             "type": "static",
             "filename": "Papa bed 1.png",
             "inode": "281474976711080",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "7ff1a295-bfa9-4f6d-a313-0758f65986b6",
@@ -13186,7 +13398,7 @@
             "type": "static",
             "filename": "Papa bed 2.png",
             "inode": "281474976711081",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "279f59fe-25ef-4b72-b280-2ae2176ca5f1",
@@ -13195,7 +13407,7 @@
             "type": "static",
             "filename": "Papa bed 3.png",
             "inode": "281474976711082",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "0c315b5c-89e6-4d61-8669-431e0b2d42dd",
@@ -13204,7 +13416,7 @@
             "type": "static",
             "filename": "Papa bed 4 (with papa).png",
             "inode": "281474976711083",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "7a500b83-d435-4e7b-a90a-05e039d6461c",
@@ -13213,7 +13425,7 @@
             "type": "static",
             "filename": "Papa bed 4.png",
             "inode": "281474976711084",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "1ab65c06-f494-4685-85a8-fa6a81f6c705",
@@ -13222,7 +13434,7 @@
             "type": "static",
             "filename": "Papa bed 5.png",
             "inode": "281474976711085",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "b83a3311-8907-428d-a239-9786fe9c9e48",
@@ -13231,7 +13443,7 @@
             "type": "static",
             "filename": "Papa bed 6.png",
             "inode": "281474976711086",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "cc309ac3-d04f-4438-9e69-66307070acf5",
@@ -13240,7 +13452,7 @@
             "type": "actor_animated",
             "filename": "Papa.png",
             "inode": "281474976711087",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "1214830c-939a-4780-9bd1-a7be46c3b03a",
@@ -13249,7 +13461,7 @@
             "type": "actor_animated",
             "filename": "Shadow.png",
             "inode": "1970324836974969",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "319be0c9-d499-482a-a4ea-038ea30ecf1d",
@@ -13258,7 +13470,7 @@
             "type": "static",
             "filename": "Stool.png",
             "inode": "281474976711094",
-            "_v": 1634182540693
+            "_v": 1634586258799
         },
         {
             "id": "1e27bb8e-c805-435a-8b87-05b4f50da4f0",
@@ -13267,7 +13479,7 @@
             "type": "static",
             "filename": "cat.png",
             "inode": "1407374883553686",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "f0c3033d-e82a-407d-9fe2-3d5da4f59c09",
@@ -13276,7 +13488,7 @@
             "type": "actor",
             "filename": "checkbox.png",
             "inode": "844424930132375",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "17219846-cda9-4e84-bdfa-c3ff105d42cc",
@@ -13285,7 +13497,7 @@
             "type": "static",
             "filename": "dog.png",
             "inode": "562949953421721",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "ede130e6-013a-42d1-a786-1aed3fd3cf32",
@@ -13294,7 +13506,7 @@
             "type": "animated",
             "filename": "duck.png",
             "inode": "2251799813685662",
-            "_v": 1634182540686
+            "_v": 1634586258771
         },
         {
             "id": "f2610e3c-8ff9-42fa-a9bb-d1591031fa17",
@@ -13303,7 +13515,7 @@
             "type": "animated",
             "filename": "fire.png",
             "inode": "1407374883553695",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "09ad70c6-3ce5-4b97-9e96-466221418a45",
@@ -13312,7 +13524,7 @@
             "type": "static",
             "filename": "ice.png",
             "inode": "562949953421728",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "dfa75239-299d-41fe-a6cd-9e9438da1938",
@@ -13321,7 +13533,7 @@
             "type": "actor",
             "filename": "npc001.png",
             "inode": "844424930132388",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "40dcd163-9f72-4861-8131-b01eb9baa000",
@@ -13330,7 +13542,7 @@
             "type": "actor",
             "filename": "npc002.png",
             "inode": "844424930132389",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "52ad34df-f245-4b2a-b94c-a82af1002871",
@@ -13339,7 +13551,7 @@
             "type": "actor_animated",
             "filename": "npc003.png",
             "inode": "562949953421734",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "ac1e8ef4-ffe6-47cd-b16f-9af5da77ec26",
@@ -13348,7 +13560,7 @@
             "type": "actor_animated",
             "filename": "player.png",
             "inode": "281474976711088",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "a0442b6a-634f-44da-9962-77938e3ed839",
@@ -13357,7 +13569,7 @@
             "type": "static",
             "filename": "radio.png",
             "inode": "281474976711089",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "3939e8d2-3987-4a22-953e-f1d82134eccf",
@@ -13366,7 +13578,7 @@
             "type": "static",
             "filename": "rock.png",
             "inode": "281474976711090",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "e20ce140-53a5-4b1b-9964-138ba0c86925",
@@ -13375,7 +13587,7 @@
             "type": "static",
             "filename": "sage.png",
             "inode": "281474976711091",
-            "_v": 1634182540686
+            "_v": 1634586258793
         },
         {
             "id": "000a6dde-cb60-436e-b357-30a529daa139",
@@ -13384,7 +13596,7 @@
             "type": "animated",
             "filename": "savepoint.png",
             "inode": "281474976711092",
-            "_v": 1634182540693
+            "_v": 1634586258793
         },
         {
             "id": "30b8266a-0533-4f90-bd33-e97dc1d498ea",
@@ -13393,7 +13605,7 @@
             "type": "static",
             "filename": "signpost.png",
             "inode": "281474976711093",
-            "_v": 1634182540686
+            "_v": 1634586258799
         },
         {
             "id": "e9e61bf7-88fd-491d-ae01-4b7f76909108",
@@ -13402,7 +13614,7 @@
             "type": "static",
             "filename": "torch.png",
             "inode": "281474976711095",
-            "_v": 1634182540693
+            "_v": 1634586258803
         }
     ],
     "palettes": [
@@ -13570,7 +13782,7 @@
                 "disableSpeedConversion": false
             },
             "inode": "844424930132370",
-            "_v": 1634182540618
+            "_v": 1634586258644
         }
     ],
     "variables": [
@@ -13687,6 +13899,10 @@
             "name": "Drawer 4"
         },
         {
+            "id": "28",
+            "name": "MC attacked"
+        },
+        {
             "id": "fa8571b4-287a-4cc1-8496-f1540dd2738e__L0",
             "name": "Local 0"
         },
@@ -13695,18 +13911,26 @@
             "name": "Local 0"
         },
         {
-            "id": "28",
-            "name": "MC attacked"
+            "id": "29",
+            "name": "Papa Talk After Attack"
+        },
+        {
+            "id": "30",
+            "name": "Papa go to MC"
+        },
+        {
+            "id": "31",
+            "name": "Move to Fire"
         }
     ],
     "settings": {
         "startSceneId": "ad74f294-963b-4d97-a731-ca431865fd76",
-        "startX": 7,
-        "startY": 3,
+        "startX": 9,
+        "startY": 9,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 67,
-        "worldScrollY": 290,
+        "worldScrollX": 62.400001525878906,
+        "worldScrollY": 406.3999938964844,
         "zoom": 100,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
