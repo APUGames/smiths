@@ -13512,7 +13512,7 @@
                         "x": 0,
                         "y": 0,
                         "direction": "",
-                        "fadeSpeed": "2"
+                        "fadeSpeed": "4"
                     }
                 },
                 {
@@ -13552,7 +13552,7 @@
                         "x": 0,
                         "y": 0,
                         "direction": "",
-                        "fadeSpeed": "2"
+                        "fadeSpeed": "4"
                     }
                 },
                 {
@@ -13591,7 +13591,7 @@
                         "text": [
                             "MC: EEP!",
                             "MC: It has eyes!!\nIt's alive?!",
-                            "Papa: Yes, MC.\nThat's what mama\nprotected.",
+                            "Papa: Yes, MC.\nThat's what Mama\nprotected.",
                             "Papa: I need you\nto take this to\nthe castle.",
                             "Papa: I would\ntrust no one else\nfor this task."
                         ],
@@ -13631,6 +13631,13 @@
             "collisions": [],
             "tileColors": [],
             "script": [
+                {
+                    "id": "d74edb6a-0b78-4b84-943e-3884661f2a2d",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    }
+                },
                 {
                     "id": "124956af-b3c7-4827-8176-a3a6cb596ce5",
                     "command": "EVENT_TEXT",
@@ -14753,13 +14760,13 @@
         }
     ],
     "settings": {
-        "startSceneId": "1ee5ea34-9b2a-4d9c-93bf-0bea280e802c",
-        "startX": 0,
-        "startY": 0,
+        "startSceneId": "80f7aff6-1ddc-4472-ad46-172e72cdffd4",
+        "startX": 2,
+        "startY": 3,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 392,
-        "worldScrollY": 171,
+        "worldScrollX": 80,
+        "worldScrollY": 71,
         "zoom": 100,
         "customColorsEnabled": false,
         "defaultBackgroundPaletteIds": [
