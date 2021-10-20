@@ -1501,6 +1501,25 @@
                     "id": "027695ef-aca8-47a0-a0ed-cc7f93ed582a",
                     "x": 4,
                     "y": 1
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "b6e38d37-5819-46d5-b5bb-d330e6183427",
+                    "spriteType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "1afd2480-13f5-4f87-960c-c32cea7b28d5",
+                    "x": 4,
+                    "y": 1
                 }
             ],
             "triggers": [
@@ -2519,7 +2538,7 @@
                     "name": "",
                     "frame": 0,
                     "animate": false,
-                    "spriteSheetId": "7d22b907-5731-48a2-b77a-f63dec4b9f5b",
+                    "spriteSheetId": "b6e38d37-5819-46d5-b5bb-d330e6183427",
                     "spriteType": "static",
                     "direction": "down",
                     "moveSpeed": "1",
@@ -2612,7 +2631,7 @@
                     "hit3Script": [],
                     "id": "fffb7cbc-8908-4f67-8bbd-30aa99c87ee7",
                     "x": 3,
-                    "y": 22
+                    "y": 24
                 }
             ],
             "triggers": [
@@ -14376,9 +14395,9 @@
         }
     ],
     "settings": {
-        "startSceneId": "a7f15186-6a22-44e3-ac47-e7edcc6e8391",
-        "startX": 4,
-        "startY": 4,
+        "startSceneId": "f14dcf0d-6a3a-49ce-95ec-ae6c8d1bfa1b",
+        "startX": 8,
+        "startY": 8,
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 67,
