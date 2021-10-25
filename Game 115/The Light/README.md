@@ -10,7 +10,7 @@ A game where you play as MC, a 12 year old girl who is trying to save her papa, 
 
 ## Instructions - 
 
-Instructions go here
+Wake up and take care of Papa, as he is incredibly sick. Go finish your chores while he rests. Tap boxes around using Z and then head outside to finish your last chore.
 
 ## Controls - 
 
