@@ -924,7 +924,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "This is where\nArlo, Edie and I\nwould tell stories",
+                                    "That's where Arlo,\nEdie and I would\ntell stories.",
                                     "I miss them a\nlot..."
                                 ],
                                 "avatarId": ""
@@ -959,7 +959,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "This is where\nArlo, Edie and I\nwould tell stories",
+                                    "That's where Arlo,\nEdie and I would\ntell stories.",
                                     "I miss them a\nlot..."
                                 ],
                                 "avatarId": ""
@@ -1147,7 +1147,7 @@
                             "args": {
                                 "text": [
                                     "Papa: MC... I\nhaven't been\nhonest with you...",
-                                    "Papa:\nThere's..-*cough*\nI need to tell you",
+                                    "Papa:\nThere's..*cough*\nI need to tell you",
                                     "Papa: You remember\nyour mama, right?",
                                     "MC: Mhm.. what\nabout her..?",
                                     "Papa: She\nprotected you,\nprotected us.",
@@ -5108,8 +5108,8 @@
                                         "args": {
                                             "text": [
                                                 "MC: Here's your\nmedicine Papa...",
-                                                "MC: I'm going to\ngo start on the\nchores",
-                                                "I love you papa"
+                                                "MC: I'm going to\ngo start on the\nchores.",
+                                                "I love you papa."
                                             ],
                                             "avatarId": ""
                                         }
@@ -14774,7 +14774,7 @@
         "startY": 0,
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 6,
+        "worldScrollX": 7,
         "worldScrollY": 122,
         "zoom": 100,
         "customColorsEnabled": false,
